@@ -4,4 +4,3 @@ db.sqlite3
 venv/
 uwsgi_params
 set_env_var
-Jura.ttf
