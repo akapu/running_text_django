@@ -7,9 +7,6 @@ from .models import Query
 import os
 
 
-def index(request):
-    return HttpResponse("it-solution.ru")
-
 def video(request):
     TEXT = request.GET.get("text", "")
 
