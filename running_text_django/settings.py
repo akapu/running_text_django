@@ -34,7 +34,7 @@ else:
 DEBUG = not IS_PROD
 
 if IS_PROD:
-    ALLOWED_HOSTS = os.environ["RUNNING_TEXT_DOMAINS"].split(' ')
+    ALLOWED_HOSTS = os.environ["RUNNING_TEXT_DOMAINS"].split(',')
 else:
     ALLOWED_HOSTS = []
 
