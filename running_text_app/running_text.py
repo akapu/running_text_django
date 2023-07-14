@@ -46,10 +46,7 @@ def create_video(
         (WIDTH, HEIGHT)
     )
 
-    total_shift = 0
-
-    if TEXT_WIDTH > (WIDTH - 2*H_PAD):
-        total_shift = WIDTH - TEXT_WIDTH - 2*H_PAD
+    total_shift = -(TEXT_WIDTH + WIDTH)
 
     for i in range(TOTAL_FRAMES):
         img_pil = Image.new("RGB", (WIDTH, HEIGHT))
@@ -58,7 +55,7 @@ def create_video(
         shift = int((i / (TOTAL_FRAMES - 1)) * total_shift)
         
         img_drw.text(
-                (H_PAD + shift, V_PAD), 
+                (WIDTH + shift, V_PAD), 
                 TEXT,
                 font=FONT,
                 fill=(255, 255, 255)
